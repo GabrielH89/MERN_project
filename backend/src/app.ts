@@ -4,6 +4,9 @@ const app = express();
 import router from './routes/notes';
 import morgan from 'morgan';
 import createHttpError, {isHttpError} from "http-errors";
+import cors from "cors";
+
+app.use(cors());
 
 app.use(morgan("dev"));
 
